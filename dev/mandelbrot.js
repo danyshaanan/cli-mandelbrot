@@ -36,7 +36,7 @@ function calc() {
 
 function pixel(w,h) {
   var x = (w - clc.width/2)/def.pixelsPerUnit + def.x;
-  var y = ((h - clc.height/2)/def.pixelsPerUnit + def.y) * def.pixelHightByWidthRatio;
+  var y = (h - clc.height/2)/def.pixelsPerUnit*def.pixelHightByWidthRatio + def.y;
   var x0 = x;
   var y0 = y;
   for (var i = 0; i < def.iterations; i++) {
