@@ -6,7 +6,7 @@ var def = {
   pixelsPerUnit: Math.pow(2,0),//Math.pow(2,56),
   pixelHightByWidthRatio: 3,
   x: -1.149719506110225,
-  y: -0.104065970173141,
+  y: -0.31219791051,
   iterations: 240
 }
 // def = JSON.parse(JSON.stringify(def));
