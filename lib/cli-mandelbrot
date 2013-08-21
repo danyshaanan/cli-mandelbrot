@@ -5,29 +5,15 @@
 var clc = require('cli-color');
 var rek = require('rekuire');
 
-var calc = rek('grid').calc;
 var def = rek('def');
 var input = rek('input');
+var getScreen = rek('cache').getScreen;
 
 var helpTextOn = true;
-var cache = {};
-var cacheSize = 20;
-
-function calcCache(def) {
-  var key = JSON.stringify(def);
-  if (key in cache) {
-    return cache[key];
-  }
-  while (Object.keys(cache).length > cacheSize) {
-    delete cache[Object.keys(cache)[0]];
-  }
-  var val = cache[key] = calc(def);
-  return val;
-}
 
 function next() {
   var text = [JSON.stringify(def,null,2),"q: toggle help text","w: up","s: down","a: left","d: right","r: zoom in","f: zoom out","t: more iterations","g: less iterations","o: quit",""].join("\n");
-  var output = clc.moveTo(0,0) + calcCache(def);
+  var output = clc.moveTo(0,0) + getScreen(def);
   if (helpTextOn) {
     output += clc.moveTo(0,0) + clc.xterm(8)(text);
   }
