@@ -19,8 +19,7 @@ Use the 'wasd' keys to move around, 'r' and 'f' to zoom in and out, 't' and 'f' 
 * * *
 ### TODOs
 
-* Cache last result to avoid recalculating when doing the inverse of last movement.
-* Use cached last result to avoid recalculating most of the screen when moving with 'wasd'.
+* Use last cached result to avoid recalculating most of the screen when moving with 'wasd'.
 * Pre-calculate next assumed movement.
 
 * * *
