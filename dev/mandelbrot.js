@@ -41,7 +41,8 @@ process.stdin.on("data", function(data) {
 
 next();
 function next() {
-  var output = [clc.moveTo(0,0),calc(),clc.moveTo(0,0),"def: ",clc.yellow(JSON.stringify(def,null,2))," "];
+  var text = [JSON.stringify(def,null,2),"w: up", "s: down", "a: left", "d: right", "r: zoom in", "f: zoom out", "t: more iterations", "g: less iterations", "o: quit",""].join("\n");
+  var output = [clc.moveTo(0,0),calc(),clc.moveTo(0,0),clc.xterm(8)(text)," "];
   process.stdout.write(output.join(''));
 }
 ////////////////////////////////////////////////////////////////////////////////
