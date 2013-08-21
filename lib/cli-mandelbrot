@@ -10,14 +10,22 @@ var def = rek('def');
 var input = rek('input');
 
 var helpTextOn = true;
-
+var message;
 var cache = {};
+var cacheSize = 20;
 
 function calcCache(def) {
+  message = '';
   var key = JSON.stringify(def);
   if (key in cache) {
+    message += "key in cache, ";
     return cache[key];
   }
+  while (Object.keys(cache).length > cacheSize) {
+    message += "deleting cache, ";
+    delete cache[Object.keys(cache)[0]];
+  }
+  message += "calculating value, ";
   var val = calc(def);
   cache[key] = val;
   return val;
@@ -29,6 +37,7 @@ function next() {
   if (helpTextOn) {
     output += clc.moveTo(0,0) + clc.xterm(8)(text);
   }
+  output += message;
   process.stdout.write(output);
 }
 
