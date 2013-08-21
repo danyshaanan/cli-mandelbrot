@@ -11,7 +11,7 @@ var def = {
 }
 // def = JSON.parse(JSON.stringify(def));
 
-
+var clcColors = [196,202,208,214,220,226,190,154,118,82,46,47,48,49,50,51,45,39,33,27,21,57,93,129,165,201];
 
 process.stdin.setRawMode(true);
 process.stdin.resume();
@@ -80,7 +80,7 @@ function getYs() {
 
 function colorByIterations(iterations) {
   if (iterations != -1) {
-    var color = (iterations/240 * 200 + 55)|0;
+    var color = clcColors[iterations%clcColors.length];
     return clc.xterm(color)("0");
   }
   return clc.xterm(0)("0");
