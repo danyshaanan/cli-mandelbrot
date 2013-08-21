@@ -3,7 +3,7 @@
 var clc = require('cli-color');
 
 var def = {
-  pixelsPerUnit: Math.pow(2,0),//Math.pow(2,56),
+  pixelsPerUnit: Math.pow(2,5),//Math.pow(2,56),
   pixelHightByWidthRatio: 3,
   x: -1.149719506110225,
   y: -0.312197910519423,
@@ -11,15 +11,38 @@ var def = {
 }
 // def = JSON.parse(JSON.stringify(def));
 
-next();
 
+
+process.stdin.setRawMode(true);
+process.stdin.resume();
+process.stdin.on("data", function(data) {
+  var key = data.toString()[0];
+  if (key == "o") {
+    process.exit();
+  } else if (key == "w") {
+    def.y -= 10 / def.pixelsPerUnit;
+  } else if (key == "a") {
+    def.x -= 10 / def.pixelsPerUnit;
+  } else if (key == "s") {
+    def.y += 10 / def.pixelsPerUnit;
+  } else if (key == "d") {
+    def.x += 10 / def.pixelsPerUnit;
+  } else if (key == "r") {
+    def.pixelsPerUnit *= 2;
+  } else if (key == "f") {
+    def.pixelsPerUnit /= 2;
+  } else if (key == "t") {
+    def.iterations += 10;
+  } else if (key == "g") {
+    def.iterations -= 10;
+  }
+  next();
+});
+
+next();
 function next() {
-  if (def.pixelsPerUnit > Math.pow(2,56)) return;
-  var output = [clc.moveTo(0,0),calc(),clc.moveTo(0,0),"def.pixelsPerUnit: ",def.pixelsPerUnit," "];
+  var output = [clc.moveTo(0,0),calc(),clc.moveTo(0,0),"def: ",clc.yellow(JSON.stringify(def,null,2))," "];
   process.stdout.write(output.join(''));
-  // return;
-  def.pixelsPerUnit *= 2;
-  setTimeout(next, 250);
 }
 ////////////////////////////////////////////////////////////////////////////////
 
