@@ -21,8 +21,7 @@ function calcCache(def) {
   while (Object.keys(cache).length > cacheSize) {
     delete cache[Object.keys(cache)[0]];
   }
-  var val = calc(def);
-  cache[key] = val;
+  var val = cache[key] = calc(def);
   return val;
 }
 
