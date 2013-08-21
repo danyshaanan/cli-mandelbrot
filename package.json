@@ -1,6 +1,6 @@
 {
   "name": "cli-mandelbrot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A command line viewer of the Mandelbrot fractal",
   "keywords": ["mandelbrot", "fractal", "ascii", "math", "cli"],
   "homepage": "https://github.com/danyshaanan/cli-mandelbrot",
@@ -25,13 +25,13 @@
     "email" : "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./lib/cli-mandelbrot.js",
+  "main": "./lib/cli-mandelbrot",
   "scripts": {
     "test": "jasmine-node ./test/",
-    "start": "node ."
+    "start": "node ./lib/cli-mandelbrot"
   },
   "bin": {
-      "cli-mandelbrot" : "./lib/cli-mandelbrot.js"
+      "cli-mandelbrot" : "./lib/cli-mandelbrot"
   },
   "dependencies": {
     "rekuire": "*",
