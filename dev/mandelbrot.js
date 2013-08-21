@@ -50,10 +50,10 @@ function calc() {
   var xs = getXs();
   var ys = getYs();
   var output = '';
-  for (var h = 0; h < clc.height; h++) {
+  for (var iy in ys) {
     output += '\n';
-    for (var w = 0; w < clc.width; w++) {
-      var iterations = iterationsToEscape(xs[w],ys[h], def.iterations);
+    for (var ix in xs) {
+      var iterations = iterationsToEscape(xs[ix],ys[iy], def.iterations);
       var color = colorByIterations(iterations);
       output += color;
     }
