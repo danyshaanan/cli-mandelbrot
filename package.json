@@ -1,0 +1,43 @@
+{
+  "name": "cli-mandelbrot",
+  "version": "0.0.0",
+  "description": "A command line viewer of the Mandelbrot fractal",
+  "keywords": ["mandelbrot", "fractal", "ascii", "math", "cli"],
+  "homepage": "https://github.com/danyshaanan/cli-mandelbrot",
+  "author": {
+    "name": "Dany Shaanan",
+    "email": "danyshaanan@gmail.com",
+    "url": "http://danyshaanan.com/"
+  },
+  "contributors": [],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/danyshaanan/cli-mandelbrot/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danyshaanan/cli-mandelbrot.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/danyshaanan/cli-mandelbrot",
+    "email" : "danyshaanan@gmail.com"
+  },
+  "preferGlobal": true,
+  "main": "./lib/cli-mandelbrot.js",
+  "scripts": {
+    "test": "jasmine-node ./test/",
+    "start": "node ."
+  },
+  "bin": {
+      "nsyrc" : "./lib/cli-mandelbrot.js"
+  },
+  "dependencies": {
+    "rekuire": "*",
+    "cli-color": "*"
+  },
+  "devDependencies": {
+      "proxyquire": "*"
+  }
+}
