@@ -11,9 +11,21 @@ var input = rek('input');
 
 var helpTextOn = true;
 
+var cache = {};
+
+function calcCache(def) {
+  var key = JSON.stringify(def);
+  if (key in cache) {
+    return cache[key];
+  }
+  var val = calc(def);
+  cache[key] = val;
+  return val;
+}
+
 function next() {
   var text = [JSON.stringify(def,null,2),"q: toggle help text","w: up","s: down","a: left","d: right","r: zoom in","f: zoom out","t: more iterations","g: less iterations","o: quit",""].join("\n");
-  var output = clc.moveTo(0,0) + calc(def);
+  var output = clc.moveTo(0,0) + calcCache(def);
   if (helpTextOn) {
     output += clc.moveTo(0,0) + clc.xterm(8)(text);
   }
