@@ -31,7 +31,7 @@
     "start": "node ."
   },
   "bin": {
-      "nsyrc" : "./lib/cli-mandelbrot.js"
+      "cli-mandelbrot" : "./lib/cli-mandelbrot.js"
   },
   "dependencies": {
     "rekuire": "*",
