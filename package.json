@@ -1,7 +1,7 @@
 {
   "name": "cli-mandelbrot",
-  "version": "0.0.4",
-  "description": "A command line viewer of the Mandelbrot fractal",
+  "version": "0.0.5",
+  "description": "A command line viewer of the Mandelbrot set",
   "keywords": ["mandelbrot", "fractal", "ascii", "math", "cli"],
   "homepage": "https://github.com/danyshaanan/cli-mandelbrot",
   "author": {
