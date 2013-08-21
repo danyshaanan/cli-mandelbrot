@@ -7,7 +7,7 @@ var def = {
   pixelHightByWidthRatio: 3,
   x: -1.149719506110225,
   y: -0.312197910519423,
-  iterations: 200
+  iterations: 100
 }
 // def = JSON.parse(JSON.stringify(def));
 
