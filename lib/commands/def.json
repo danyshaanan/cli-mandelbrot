@@ -3,5 +3,11 @@
   "pixelHightByWidthRatio": 3,
   "x": -1.149719506110225,
   "y": -0.312197910519423,
-  "iterations": 100
+  "iterations": 100,
+  "julia": {
+    "on": false,
+    "a": 0.375,
+    "b": 0.267,
+    "juliaMovement": false
+  }
 }

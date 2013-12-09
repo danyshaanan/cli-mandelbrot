@@ -12,7 +12,22 @@ var getScreen = rek('cache').getScreen;
 var helpTextOn = true;
 
 function next() {
-  var text = [JSON.stringify(def,null,2),"q: toggle help text","w: up","s: down","a: left","d: right","r: zoom in","f: zoom out","t: more iterations","g: less iterations","o: quit",""].join("\n");
+  var text = [
+    JSON.stringify(def,null,2),
+    "q: toggle help text",
+    "w: up",
+    "s: down",
+    "a: left",
+    "d: right",
+    "r: zoom in",
+    "f: zoom out",
+    "t: more iterations",
+    "g: less iterations",
+    "j: toggle julia mode",
+    "e: when in julia mode, toggle to julia movement",
+    "o: quit",
+    ""
+    ].join("\n");
   var output = clc.moveTo(0,0) + getScreen(def, clc.width-1, clc.height);
   if (helpTextOn) {
     output += clc.moveTo(0,0) + clc.xterm(8)(text);
