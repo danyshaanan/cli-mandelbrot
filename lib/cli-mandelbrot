@@ -2,14 +2,23 @@
 
 "use strict";
 
+var cli = require('commander');
 var clc = require('cli-color');
 var rek = require('rekuire');
 
+var version = rek('package.json').version;
 var def = rek('def');
 var input = rek('input');
 var getScreen = rek('cache').getScreen;
 
 var helpTextOn = true;
+
+cli
+  .version(version)
+  .usage("")
+  .option("-j, --julia", "start in julia mode")
+  .parse(process.argv);
+
 
 function next() {
   var text = [
@@ -34,6 +43,8 @@ function next() {
   }
   process.stdout.write(output);
 }
+
+def.julia.on = Boolean(cli.julia);
 
 process.stdin.setRawMode(true);
 process.stdin.resume();
