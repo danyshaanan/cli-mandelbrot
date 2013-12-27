@@ -51,6 +51,7 @@ process.stdin.resume();
 process.stdin.on("data", function(data) {
   var key = data.toString()[0];
   if (key == "o") {
+    console.log(clc.reset);
     process.exit();
   } else if (key == "q") {
     helpTextOn = !helpTextOn;
