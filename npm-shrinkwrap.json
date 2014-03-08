@@ -1,6 +1,6 @@
 {
   "name": "cli-mandelbrot",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "dependencies": {
     "rekuire": {
       "version": "0.1.5",
