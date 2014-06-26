@@ -25,7 +25,6 @@
     "email" : "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
-  "main": "./lib/cli-mandelbrot",
   "scripts": {
     "test": "jasmine-node ./test/",
     "start": "node ./lib/cli-mandelbrot"
