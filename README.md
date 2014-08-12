@@ -25,3 +25,9 @@ Use the 'wasd' keys to move around, 'r' and 'f' to zoom in and out, 't' and 'f' 
 * * *
 
 ![Example screen shot](https://raw.github.com/danyshaanan/cli-mandelbrot/master/doc/example2.png?raw=true)
+
+* * *
+### Feedback
+* If you enjoyed this package, please star it on Github.
+* You are invited to [Open an issue on Github](https://github.com/danyshaanan/nsyrc/issues).
+* For other matters, my email address can be found on my [NpmJS page](https://www.npmjs.org/~danyshaanan), my [Github page](https://github.com/danyshaanan), or my [website](http://danyshaanan.com/).
