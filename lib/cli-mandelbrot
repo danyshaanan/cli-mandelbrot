@@ -1,22 +1,22 @@
 #!/usr/bin/env node
 
-'use strict';
+'use strict'
 
-var cli = require('commander');
-var clc = require('cli-color');
+var cli = require('commander')
+var clc = require('cli-color')
 
-var version = require('./../package.json').version;
-var def = require('./commands/def.json');
-var input = require('./commands/input.js');
-var getScreen = require('./commands/cache.js').getScreen;
+var version = require('./../package.json').version
+var def = require('./commands/def.json')
+var input = require('./commands/input.js')
+var getScreen = require('./commands/cache.js').getScreen
 
-var helpTextOn = true;
+var helpTextOn = true
 
 cli
   .version(version)
   .usage('')
   .option('-j, --julia', 'start in julia mode')
-  .parse(process.argv);
+  .parse(process.argv)
 
 
 function next() {
@@ -35,28 +35,28 @@ function next() {
     'e: when in julia mode, toggle to julia movement',
     'o: quit',
     ''
-    ].join('\n');
-  var output = clc.moveTo(0, 0) + getScreen(def, clc.width - 1, clc.height);
+    ].join('\n')
+  var output = clc.moveTo(0, 0) + getScreen(def, clc.width - 1, clc.height)
   if (helpTextOn) {
-    output += clc.moveTo(0, 0) + clc.xterm(8)(text);
+    output += clc.moveTo(0, 0) + clc.xterm(8)(text)
   }
-  process.stdout.write(output);
+  process.stdout.write(output)
 }
 
-def.julia.on = Boolean(cli.julia);
+def.julia.on = Boolean(cli.julia)
 
-process.stdin.setRawMode(true);
-process.stdin.resume();
+process.stdin.setRawMode(true)
+process.stdin.resume()
 process.stdin.on('data', function(data) {
-  var key = data.toString()[0];
+  var key = data.toString()[0]
   if (key === 'o') {
-    console.log(clc.reset);
-    process.exit();
+    console.log(clc.reset)
+    process.exit()
   } else if (key === 'q') {
-    helpTextOn = !helpTextOn;
+    helpTextOn = !helpTextOn
   }
-  def = input.keyPress(def, key);
-  next();
-});
+  def = input.keyPress(def, key)
+  next()
+})
 
-next();
+next()

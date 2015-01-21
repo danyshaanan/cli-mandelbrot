@@ -114,7 +114,7 @@
         "guard-for-in": 2,
         "radix": 0,
         "new-cap": 2,
-        "semi": 2,
+        "semi": 0,
         "use-isnan": 2,
         "quotes": [2, "single"],
         "max-params": [0, 3],
