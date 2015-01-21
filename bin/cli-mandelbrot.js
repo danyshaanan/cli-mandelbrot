@@ -4,9 +4,9 @@
 
 var clc = require('cli-color')
 
-var def = require('./commands/def.json')
-var input = require('./commands/input.js')
-var getScreen = require('./commands/cache.js').getScreen
+var def = require('../lib/def.json')
+var input = require('../lib/input.js')
+var getScreen = require('../lib/cache.js').getScreen
 
 var helpTextOn = true
 

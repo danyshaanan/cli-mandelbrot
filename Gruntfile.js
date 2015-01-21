@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     eslint: {
-      target: ['lib/**/*.js', 'lib/cli-mandelbrot']
+      target: ['lib/**/*.js', 'bin/**/*.js']
     }
   });
 

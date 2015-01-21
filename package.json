@@ -33,10 +33,10 @@
   "preferGlobal": true,
   "scripts": {
     "test": "jasmine-node ./test/",
-    "start": "node ./lib/cli-mandelbrot"
+    "start": "node ./bin/cli-mandelbrot"
   },
   "bin": {
-    "cli-mandelbrot": "./lib/cli-mandelbrot"
+    "cli-mandelbrot": "./bin/cli-mandelbrot.js"
   },
   "dependencies": {
     "cli-color": "~0.2.3"
