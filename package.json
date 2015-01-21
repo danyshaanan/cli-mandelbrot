@@ -33,7 +33,6 @@
       "cli-mandelbrot" : "./lib/cli-mandelbrot"
   },
   "dependencies": {
-    "rekuire": "~0.1.5",
     "cli-color": "~0.2.3",
     "commander": "~2.1.0"
   },

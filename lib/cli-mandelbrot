@@ -4,12 +4,11 @@
 
 var cli = require('commander');
 var clc = require('cli-color');
-var rek = require('rekuire');
 
-var version = rek('package.json').version;
-var def = rek('def');
-var input = rek('input');
-var getScreen = rek('cache').getScreen;
+var version = require('./../package.json').version;
+var def = require('./commands/def.json');
+var input = require('./commands/input.js');
+var getScreen = require('./commands/cache.js').getScreen;
 
 var helpTextOn = true;
 
