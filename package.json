@@ -2,7 +2,13 @@
   "name": "cli-mandelbrot",
   "version": "0.1.5",
   "description": "A command line viewer of the Mandelbrot set",
-  "keywords": ["mandelbrot", "fractal", "ascii", "math", "cli"],
+  "keywords": [
+    "mandelbrot",
+    "fractal",
+    "ascii",
+    "math",
+    "cli"
+  ],
   "homepage": "https://github.com/danyshaanan/cli-mandelbrot",
   "author": {
     "name": "Dany Shaanan",
@@ -21,8 +27,8 @@
     "url": "git://github.com/danyshaanan/cli-mandelbrot.git"
   },
   "bugs": {
-    "url" : "https://github.com/danyshaanan/cli-mandelbrot",
-    "email" : "danyshaanan@gmail.com"
+    "url": "https://github.com/danyshaanan/cli-mandelbrot",
+    "email": "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
   "scripts": {
@@ -30,13 +36,13 @@
     "start": "node ./lib/cli-mandelbrot"
   },
   "bin": {
-      "cli-mandelbrot" : "./lib/cli-mandelbrot"
+    "cli-mandelbrot": "./lib/cli-mandelbrot"
   },
   "dependencies": {
     "cli-color": "~0.2.3",
     "commander": "~2.1.0"
   },
   "devDependencies": {
-      "proxyquire": "*"
+    "proxyquire": "*"
   }
 }
