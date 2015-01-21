@@ -30,11 +30,6 @@
           }
         }
       }
-    },
-    "commander": {
-      "version": "2.1.0",
-      "from": "commander@2.1.0",
-      "resolved": "https://registry.npmjs.org/commander/-/commander-2.1.0.tgz"
     }
   }
 }

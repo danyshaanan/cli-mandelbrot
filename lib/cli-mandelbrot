@@ -2,22 +2,13 @@
 
 'use strict'
 
-var cli = require('commander')
 var clc = require('cli-color')
 
-var version = require('./../package.json').version
 var def = require('./commands/def.json')
 var input = require('./commands/input.js')
 var getScreen = require('./commands/cache.js').getScreen
 
 var helpTextOn = true
-
-cli
-  .version(version)
-  .usage('')
-  .option('-j, --julia', 'start in julia mode')
-  .parse(process.argv)
-
 
 function next() {
   var text = [
@@ -31,8 +22,6 @@ function next() {
     'f: zoom out',
     't: more iterations',
     'g: less iterations',
-    'j: toggle julia mode',
-    'e: when in julia mode, toggle to julia movement',
     'o: quit',
     ''
     ].join('\n')
@@ -42,8 +31,6 @@ function next() {
   }
   process.stdout.write(output)
 }
-
-def.julia.on = Boolean(cli.julia)
 
 process.stdin.setRawMode(true)
 process.stdin.resume()

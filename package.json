@@ -39,8 +39,7 @@
     "cli-mandelbrot": "./lib/cli-mandelbrot"
   },
   "dependencies": {
-    "cli-color": "~0.2.3",
-    "commander": "~2.1.0"
+    "cli-color": "~0.2.3"
   },
   "devDependencies": {
     "grunt": "0.4.5",
