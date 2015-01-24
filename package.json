@@ -32,7 +32,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "test": "jasmine-node ./test/",
+    "test": "grunt",
     "start": "node ./bin/cli-mandelbrot"
   },
   "bin": {
