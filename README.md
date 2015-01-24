@@ -2,6 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/cli-mandelbrot.svg?style=flat)](https://npmjs.org/package/cli-mandelbrot)
 [![Build Status](https://travis-ci.org/danyshaanan/cli-mandelbrot.png?branch=master)](https://travis-ci.org/danyshaanan/cli-mandelbrot)
+[![License](http://img.shields.io/npm/l/cli-mandelbrot.svg)](LICENSE)
 
 #### A command line tool for viewing and moving inside the [Mandelbrot set](http://en.wikipedia.org/wiki/Mandelbrot_set).
 
