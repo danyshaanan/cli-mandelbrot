@@ -40,7 +40,7 @@
     "cli-mandelbrot": "./bin/cli-mandelbrot.js"
   },
   "dependencies": {
-    "cli-color": "~0.2.3"
+    "cli-color": "0.3.2"
   },
   "devDependencies": {
     "grunt": "0.4.5",
