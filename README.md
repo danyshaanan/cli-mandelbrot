@@ -24,12 +24,6 @@ This package has no flags or options. Just type `cli-mandelbrot` and you are in:
 Use the 'wasd' keys to move around, 'r' and 'f' to zoom in and out, 't' and 'f' to calculate more or less iterations, 'q' to toggle the help text, and 'o' to quit.
 
 * * *
-### TODOs
-
-* Use last cached result to avoid recalculating most of the screen when moving with 'wasd'.
-* Pre-calculate next assumed movement.
-
-* * *
 
 ![Example screen shot](https://raw.github.com/danyshaanan/cli-mandelbrot/master/doc/example2.png?raw=true)
 
