@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = function(grunt) {
 
@@ -15,10 +15,10 @@ module.exports = function(grunt) {
         push: false
       }
     }
-  });
+  })
 
   grunt.loadNpmTasks('grunt-eslint')
   grunt.loadNpmTasks('grunt-bump')
 
   grunt.registerTask('default', ['eslint'])
-};
+}
