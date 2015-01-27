@@ -1,6 +1,6 @@
 {
   "name": "cli-mandelbrot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "cli-color": {
       "version": "0.3.2",

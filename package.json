@@ -1,6 +1,6 @@
 {
   "name": "cli-mandelbrot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A command line viewer of the Mandelbrot set",
   "keywords": [
     "mandelbrot",
