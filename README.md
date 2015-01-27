@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/danyshaanan/cli-mandelbrot.png)](https://travis-ci.org/danyshaanan/cli-mandelbrot)
 [![NPM Version](https://img.shields.io/npm/v/cli-mandelbrot.svg?style=flat)](https://npmjs.org/package/cli-mandelbrot)
 [![License](http://img.shields.io/npm/l/cli-mandelbrot.svg?style=flat)](LICENSE)
+[![Dependency Status](https://david-dm.org/danyshaanan/cli-mandelbrot.svg)](https://david-dm.org/danyshaanan/cli-mandelbrot)
+[![devDependency Status](https://david-dm.org/danyshaanan/cli-mandelbrot/dev-status.svg)](https://david-dm.org/danyshaanan/cli-mandelbrot#info=devDependencies)
 
 #### A command line tool for viewing and moving inside the [Mandelbrot set](http://en.wikipedia.org/wiki/Mandelbrot_set).
 
