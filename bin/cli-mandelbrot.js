@@ -26,7 +26,6 @@ var baseHelpText = [
   ''
 ].join('\n')
 
-
 function next() {
   var output = moveToZero + getScreen(def, clc.width - 1, clc.height)
   if (helpTextOn) {
