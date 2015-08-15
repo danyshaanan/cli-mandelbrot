@@ -1,8 +1,6 @@
 {
     "extends": "standard",
     "rules": {
-        "space-before-function-paren": [2, "never"],
-        "spaced-comment": 0,
-        "radix": 0
+        "space-before-function-paren": [2, "never"]
     }
 }
