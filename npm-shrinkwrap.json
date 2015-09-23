@@ -4,76 +4,78 @@
   "dependencies": {
     "cli-color": {
       "version": "0.3.2",
-      "from": "cli-color@",
+      "from": "https://registry.npmjs.org/cli-color/-/cli-color-0.3.2.tgz",
       "resolved": "https://registry.npmjs.org/cli-color/-/cli-color-0.3.2.tgz",
       "dependencies": {
         "d": {
           "version": "0.1.1",
-          "from": "d@~0.1.1",
+          "from": "https://registry.npmjs.org/d/-/d-0.1.1.tgz",
           "resolved": "https://registry.npmjs.org/d/-/d-0.1.1.tgz"
         },
         "es5-ext": {
           "version": "0.10.5",
-          "from": "es5-ext@~0.10.2",
+          "from": "es5-ext@0.10.5",
+          "resolved": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.5.tgz",
           "dependencies": {
             "es6-iterator": {
               "version": "0.1.2",
-              "from": "es6-iterator@~0.1.2",
+              "from": "https://registry.npmjs.org/es6-iterator/-/es6-iterator-0.1.2.tgz",
               "resolved": "https://registry.npmjs.org/es6-iterator/-/es6-iterator-0.1.2.tgz"
             },
             "es6-symbol": {
               "version": "0.1.1",
-              "from": "es6-symbol@~0.1.1",
+              "from": "https://registry.npmjs.org/es6-symbol/-/es6-symbol-0.1.1.tgz",
               "resolved": "https://registry.npmjs.org/es6-symbol/-/es6-symbol-0.1.1.tgz"
             }
           }
         },
         "memoizee": {
           "version": "0.3.8",
-          "from": "memoizee@0.3.x",
+          "from": "https://registry.npmjs.org/memoizee/-/memoizee-0.3.8.tgz",
           "resolved": "https://registry.npmjs.org/memoizee/-/memoizee-0.3.8.tgz",
           "dependencies": {
             "es6-weak-map": {
               "version": "0.1.2",
-              "from": "es6-weak-map@~0.1.2",
+              "from": "https://registry.npmjs.org/es6-weak-map/-/es6-weak-map-0.1.2.tgz",
               "resolved": "https://registry.npmjs.org/es6-weak-map/-/es6-weak-map-0.1.2.tgz",
               "dependencies": {
                 "es6-iterator": {
                   "version": "0.1.2",
-                  "from": "es6-iterator@~0.1.1",
+                  "from": "https://registry.npmjs.org/es6-iterator/-/es6-iterator-0.1.2.tgz",
                   "resolved": "https://registry.npmjs.org/es6-iterator/-/es6-iterator-0.1.2.tgz"
                 },
                 "es6-symbol": {
                   "version": "0.1.1",
-                  "from": "es6-symbol@0.1.x",
+                  "from": "https://registry.npmjs.org/es6-symbol/-/es6-symbol-0.1.1.tgz",
                   "resolved": "https://registry.npmjs.org/es6-symbol/-/es6-symbol-0.1.1.tgz"
                 }
               }
             },
             "event-emitter": {
               "version": "0.3.2",
-              "from": "event-emitter@~0.3.1"
+              "from": "event-emitter@0.3.2",
+              "resolved": "https://registry.npmjs.org/event-emitter/-/event-emitter-0.3.2.tgz"
             },
             "lru-queue": {
               "version": "0.1.0",
-              "from": "lru-queue@0.1",
+              "from": "https://registry.npmjs.org/lru-queue/-/lru-queue-0.1.0.tgz",
               "resolved": "https://registry.npmjs.org/lru-queue/-/lru-queue-0.1.0.tgz"
             },
             "next-tick": {
               "version": "0.2.2",
-              "from": "next-tick@~0.2.2",
+              "from": "https://registry.npmjs.org/next-tick/-/next-tick-0.2.2.tgz",
               "resolved": "https://registry.npmjs.org/next-tick/-/next-tick-0.2.2.tgz"
             }
           }
         },
         "timers-ext": {
           "version": "0.1.0",
-          "from": "timers-ext@0.1.x",
+          "from": "https://registry.npmjs.org/timers-ext/-/timers-ext-0.1.0.tgz",
           "resolved": "https://registry.npmjs.org/timers-ext/-/timers-ext-0.1.0.tgz",
           "dependencies": {
             "next-tick": {
               "version": "0.2.2",
-              "from": "next-tick@~0.2.2",
+              "from": "https://registry.npmjs.org/next-tick/-/next-tick-0.2.2.tgz",
               "resolved": "https://registry.npmjs.org/next-tick/-/next-tick-0.2.2.tgz"
             }
           }

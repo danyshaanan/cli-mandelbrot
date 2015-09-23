@@ -33,7 +33,8 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "test": "grunt",
+    "lint": "./node_modules/.bin/eslint src/**/*.js",
+    "test": "npm run lint",
     "start": "node ./bin/cli-mandelbrot"
   },
   "bin": {
@@ -45,9 +46,6 @@
   "devDependencies": {
     "eslint": "^1.1.0",
     "eslint-config-standard": "^4.1.0",
-    "eslint-plugin-standard": "^1.2.0",
-    "grunt": "0.4.5",
-    "grunt-bump": "0.0.16",
-    "grunt-eslint": "^17.1.0"
+    "eslint-plugin-standard": "^1.2.0"
   }
 }
