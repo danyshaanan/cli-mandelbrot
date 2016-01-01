@@ -33,7 +33,7 @@
   },
   "preferGlobal": true,
   "scripts": {
-    "lint": "./node_modules/.bin/eslint bin lib",
+    "lint": "eslint .",
     "test": "npm run lint",
     "start": "node ./bin/cli-mandelbrot"
   },
