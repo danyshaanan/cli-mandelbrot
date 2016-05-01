@@ -35,10 +35,10 @@
   "scripts": {
     "lint": "eslint .",
     "test": "npm run lint",
-    "start": "node ./bin/cli-mandelbrot"
+    "start": "node ./src/main/cli-mandelbrot.js"
   },
   "bin": {
-    "cli-mandelbrot": "./bin/cli-mandelbrot.js"
+    "cli-mandelbrot": "./src/main/cli-mandelbrot.js"
   },
   "dependencies": {
     "cli-color": "0.3.2"
