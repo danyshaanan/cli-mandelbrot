@@ -8,8 +8,7 @@ const keyFuncs = {
   r: def => { def.pixelsPerUnit *= 2 },
   f: def => { def.pixelsPerUnit /= 2 },
   t: def => { def.iterations += 10 },
-  g: def => { def.iterations -= 10 },
-  '0': def => { def.ascii = !def.ascii }
+  g: def => { def.iterations -= 10 }
 }
 
 module.exports = (def, key) => {

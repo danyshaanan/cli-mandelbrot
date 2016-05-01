@@ -8,8 +8,7 @@ const def = {
   pixelHightByWidthRatio: 3,
   x: -1.149719506110225,
   y: -0.312197910519423,
-  iterations: 100,
-  ascii: false
+  iterations: 100
 }
 
 const result = calculateScreen(def, 2, 2)

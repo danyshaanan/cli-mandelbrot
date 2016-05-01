@@ -10,8 +10,7 @@ const def = {
   pixelHightByWidthRatio: 3,
   x: 0,
   y: 0,
-  iterations: 10,
-  ascii: false
+  iterations: 10
 }
 
 test('keyPress should do nothing for undefined key', t => {
@@ -82,21 +81,5 @@ test('g should reduce iterations by 10', t => {
   before.iterations -= 10
   const after = clone(def)
   keyPress(after, 'g')
-  t.same(before, after, '...')
-})
-
-test('0 should toggle ascii mode', t => {
-  const before = clone(def)
-  before.ascii = !before.ascii
-  const after = clone(def)
-  keyPress(after, '0')
-  t.same(before, after, '...')
-})
-
-test('0 twice should do nothing', t => {
-  const before = clone(def)
-  const after = clone(def)
-  keyPress(after, '0')
-  keyPress(after, '0')
   t.same(before, after, '...')
 })

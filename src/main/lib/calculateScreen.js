@@ -20,6 +20,6 @@ module.exports = (def, w, h) => {
   const ys = getYs(def, h)
   return ys.map(y =>
     xs.map(
-      x => colorByIterations(iterationsToEscape(x, y, def.iterations), def.ascii)).join('')
+      x => colorByIterations(iterationsToEscape(x, y, def.iterations))).join('')
   ).join('\n')
 }

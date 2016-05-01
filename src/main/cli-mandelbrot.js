@@ -16,7 +16,6 @@ let helpTextOn = true
 const moveToZero = clc.moveTo(0, 0)
 const baseHelpText = `
 'q: toggle help text',
-'0: toggle ascii mode',
 'w: up',
 's: down',
 'a: left',
