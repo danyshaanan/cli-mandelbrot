@@ -1,6 +1,6 @@
 'use strict' /* eslint curly: [2,"multi"] */
 
-function iterationsToEscape(x0, y0, iterations) {
+module.exports = (x0, y0, iterations) => {
   let [x, y, i] = [x0, y0, 0]
   while (true) {
     if (x * x + y * y >= 4) return i
@@ -8,5 +8,3 @@ function iterationsToEscape(x0, y0, iterations) {
     if (i > iterations) return -1
   }
 }
-
-module.exports = iterationsToEscape

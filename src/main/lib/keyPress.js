@@ -12,11 +12,9 @@ const keyFuncs = {
   '0': def => { def.ascii = !def.ascii }
 }
 
-const keyPress = (def, key) => {
+module.exports = (def, key) => {
   if (keyFuncs[key]) {
     keyFuncs[key](def)
   }
   return def
 }
-
-module.exports = keyPress

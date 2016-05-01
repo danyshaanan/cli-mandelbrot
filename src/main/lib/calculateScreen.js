@@ -15,7 +15,7 @@ const getYs = (def, height) =>
     (v, h) => (h - height / 2) / def.pixelsPerUnit * def.pixelHightByWidthRatio + def.y
   )
 
-const calculateScreen = (def, w, h) => {
+module.exports = (def, w, h) => {
   const xs = getXs(def, w)
   const ys = getYs(def, h)
   return ys.map(y =>
@@ -23,5 +23,3 @@ const calculateScreen = (def, w, h) => {
       x => colorByIterations(iterationsToEscape(x, y, def.iterations), def.ascii)).join('')
   ).join('\n')
 }
-
-module.exports = calculateScreen

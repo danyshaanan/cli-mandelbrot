@@ -14,7 +14,7 @@ function checkSizeChange(w, h) {
   }
 }
 
-function calculateScreenCached(def, w, h) {
+module.exports = (def, w, h) => {
   checkSizeChange(w, h)
   const key = JSON.stringify(def)
   if (key in cache) {
@@ -26,5 +26,3 @@ function calculateScreenCached(def, w, h) {
   const val = cache[key] = calculateScreen(def, w, h)
   return val
 }
-
-module.exports = calculateScreenCached
