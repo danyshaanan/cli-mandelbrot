@@ -47,7 +47,8 @@
     "cli-mandelbrot": "./src/main/cli-mandelbrot.js"
   },
   "dependencies": {
-    "cli-color": "0.3.2"
+    "cli-color": "0.3.2",
+    "lodash": "4.11.1"
   },
   "devDependencies": {
     "ava": "0.13.0",
