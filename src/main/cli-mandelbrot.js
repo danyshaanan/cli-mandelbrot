@@ -2,11 +2,12 @@
 
 'use strict'
 
+const _ = require('lodash')
 const clc = require('cli-color')
 
 let def = require('./lib/def.json')
 const keyPress = require('./lib/keyPress.js')
-const calculateScreen = require('./lib/calculateScreenCached.js')
+const calculateScreen = _.memoize(require('./lib/calculateScreen.js'), (def, w, h) => JSON.stringify({ def, w, h }))
 
 let helpTextOn = true
 
