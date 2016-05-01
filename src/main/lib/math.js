@@ -7,9 +7,7 @@ function iterationsToEscape(x0, y0, iterations) {
 
   function iterate() {
     i++
-    var tempY = 2 * x * y + y0
-    x = x * x - y * y + x0
-    y = tempY
+    [x, y] = [x * x - y * y + x0, 2 * x * y + y0]
   }
 
   while (x * x + y * y < 4) {
