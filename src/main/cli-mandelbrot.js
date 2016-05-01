@@ -13,27 +13,27 @@ const calculateScreen = _.memoize(calculateScreenOrig, calculateScreenHash)
 
 let helpTextOn = true
 
-const moveToZero = clc.moveTo(0, 0)
-const baseHelpText = `
-'q: toggle help text',
-'w: up',
-'s: down',
-'a: left',
-'d: right',
-'r: zoom in',
-'f: zoom out',
-'t: more iterations',
-'g: less iterations',
-'o: quit',
-''
-`
+const start = clc.moveTo(0, 0)
+const toEnd = () => clc.moveTo(clc.width, clc.height)
+const keys = {
+  q: 'toggle help text',
+  w: 'up',
+  s: 'down',
+  a: 'left',
+  d: 'right',
+  r: 'zoom in',
+  f: 'zoom out',
+  t: 'more iterations',
+  g: 'less iterations',
+  o: 'quit'
+}
 
-const screen = def => moveToZero + calculateScreen(def, clc.width - 1, clc.height)
-const helpText = def => moveToZero + clc.xterm(8)(`${JSON.stringify(def, null, 2)}\n${baseHelpText}`)
+const stringify = o => _.map(o, (v, i) => `  ${i}: ${v}`).join('\n')
+const calculateHelp = def => clc.xterm(8)(`\nDef: \n${stringify(def)}\n\nKeys:\n${stringify(keys)}`)
 
 const print = () => {
-  process.stdout.write(screen(def))
-  if (helpTextOn) process.stdout.write(helpText(def))
+  process.stdout.write(start + calculateScreen(def, clc.width, clc.height))
+  if (helpTextOn) process.stdout.write(start + calculateHelp(def) + toEnd())
 }
 
 process.stdin.setRawMode(true)
