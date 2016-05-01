@@ -5,7 +5,7 @@ import calculateScreen from '../../main/lib/calculateScreen.js'
 
 const def = {
   pixelsPerUnit: 32,
-  pixelHightByWidthRatio: 3,
+  pixelAspectRatio: 2.4,
   x: -1.149719506110225,
   y: -0.312197910519423,
   iterations: 100

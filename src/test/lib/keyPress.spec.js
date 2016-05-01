@@ -6,7 +6,7 @@ import keyPress from '../../main/lib/keyPress.js'
 
 const def = {
   pixelsPerUnit: 10,
-  pixelHightByWidthRatio: 3,
+  pixelAspectRatio: 2.4,
   x: 0,
   y: 0,
   iterations: 10
