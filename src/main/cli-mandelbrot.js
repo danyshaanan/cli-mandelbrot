@@ -4,35 +4,37 @@
 
 const _ = require('lodash')
 const clc = require('cli-color')
-
-let def = require('./lib/def.json')
 const keyPress = require('./lib/keyPress.js')
-const calculateScreen = _.memoize(require('./lib/calculateScreen.js'), (def, w, h) => JSON.stringify({ def, w, h }))
+const def = require('./lib/def.json')
+
+const calculateScreenOrig = require('./lib/calculateScreen.js')
+const calculateScreenHash = (def, w, h) => JSON.stringify({ def, w, h })
+const calculateScreen = _.memoize(calculateScreenOrig, calculateScreenHash)
 
 let helpTextOn = true
 
 const moveToZero = clc.moveTo(0, 0)
-const baseHelpText = [
-  'q: toggle help text',
-  '0: toggle ascii mode',
-  'w: up',
-  's: down',
-  'a: left',
-  'd: right',
-  'r: zoom in',
-  'f: zoom out',
-  't: more iterations',
-  'g: less iterations',
-  'o: quit',
-  ''
-].join('\n')
+const baseHelpText = `
+'q: toggle help text',
+'0: toggle ascii mode',
+'w: up',
+'s: down',
+'a: left',
+'d: right',
+'r: zoom in',
+'f: zoom out',
+'t: more iterations',
+'g: less iterations',
+'o: quit',
+''
+`
 
-function next() {
-  let output = moveToZero + calculateScreen(def, clc.width - 1, clc.height)
-  if (helpTextOn) {
-    output += moveToZero + clc.xterm(8)(`${JSON.stringify(def, null, 2)}\n${baseHelpText}`)
-  }
-  process.stdout.write(output)
+const screen = def => moveToZero + calculateScreen(def, clc.width - 1, clc.height)
+const helpText = def => moveToZero + clc.xterm(8)(`${JSON.stringify(def, null, 2)}\n${baseHelpText}`)
+
+const print = () => {
+  process.stdout.write(screen(def))
+  if (helpTextOn) process.stdout.write(helpText(def))
 }
 
 process.stdin.setRawMode(true)
@@ -45,8 +47,8 @@ process.stdin.on('data', data => {
   } else if (key === 'q') {
     helpTextOn = !helpTextOn
   }
-  def = keyPress(def, key)
-  next()
+  keyPress(def, key)
+  print()
 })
 
-next()
+print()
