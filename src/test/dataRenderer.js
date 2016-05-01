@@ -1,7 +1,7 @@
 'use strict'
 
 const _ = require('lodash')
-const iterationsToEscape = require('../../main/lib/iterationsToEscape.js')
+const iterationsToEscape = require('../main/lib/iterationsToEscape.js')
 
 const trunc = a => Math.floor(a * 100) / 100
 const shuffleAndCutTwo = a => _(a).shuffle().take(2).value()
