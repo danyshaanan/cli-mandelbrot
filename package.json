@@ -37,7 +37,7 @@
   },
   "engine-strict": true,
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint src/",
     "ava": "ava src/test/**/*.spec.js",
     "watch": "npm run ava -- --watch ",
     "test": "npm run lint && npm run ava",
