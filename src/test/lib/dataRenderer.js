@@ -1,7 +1,7 @@
 'use strict'
 
 const _ = require('lodash')
-const iterationsToEscape = require('../../main/lib/math.js').iterationsToEscape
+const iterationsToEscape = require('../../main/lib/iterationsToEscape.js')
 
 let results = {}
 

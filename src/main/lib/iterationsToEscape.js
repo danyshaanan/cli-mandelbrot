@@ -9,4 +9,4 @@ function iterationsToEscape(x0, y0, iterations) {
   }
 }
 
-module.exports = { iterationsToEscape }
+module.exports = iterationsToEscape

@@ -9,4 +9,4 @@ function colorByIterations(iterations, ascii) {
   return ascii ? clc.xterm(color)('0') : clc.bgXterm(color)(' ')
 }
 
-module.exports = { colorByIterations }
+module.exports = colorByIterations

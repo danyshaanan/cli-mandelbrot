@@ -1,7 +1,7 @@
 'use strict'
 
-const math = require('./math.js')
-const colorByIterations = require('./colors.js').colorByIterations
+const iterationsToEscape = require('./iterationsToEscape.js')
+const colorByIterations = require('./colorByIterations.js')
 
 const emptyArray = l => Array.from(Array(l))
 
@@ -20,8 +20,8 @@ const calculateScreen = (def, w, h) => {
   const ys = getYs(def, h)
   return ys.map(y =>
     xs.map(
-      x => colorByIterations(math.iterationsToEscape(x, y, def.iterations), def.ascii)).join('')
+      x => colorByIterations(iterationsToEscape(x, y, def.iterations), def.ascii)).join('')
   ).join('\n')
 }
 
-module.exports = { calculateScreen }
+module.exports = calculateScreen

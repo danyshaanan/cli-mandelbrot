@@ -19,4 +19,4 @@ const keyPress = (def, key) => {
   return def
 }
 
-module.exports = { keyPress }
+module.exports = keyPress

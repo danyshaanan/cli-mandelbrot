@@ -1,7 +1,7 @@
 'use strict'
 
 import test from 'ava'
-import { keyPress } from '../../main/lib/input.js'
+import keyPress from '../../main/lib/keyPress.js'
 
 const clone = o => JSON.parse(JSON.stringify(o))
 

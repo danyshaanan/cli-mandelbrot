@@ -5,8 +5,8 @@
 const clc = require('cli-color')
 
 let def = require('./lib/def.json')
-const input = require('./lib/input.js')
-const getScreen = require('./lib/cache.js').getScreen
+const keyPress = require('./lib/keyPress.js')
+const calculateScreen = require('./lib/calculateScreenCached.js')
 
 let helpTextOn = true
 
@@ -27,7 +27,7 @@ const baseHelpText = [
 ].join('\n')
 
 function next() {
-  let output = moveToZero + getScreen(def, clc.width - 1, clc.height)
+  let output = moveToZero + calculateScreen(def, clc.width - 1, clc.height)
   if (helpTextOn) {
     output += moveToZero + clc.xterm(8)(`${JSON.stringify(def, null, 2)}\n${baseHelpText}`)
   }
@@ -44,7 +44,7 @@ process.stdin.on('data', data => {
   } else if (key === 'q') {
     helpTextOn = !helpTextOn
   }
-  def = input.keyPress(def, key)
+  def = keyPress(def, key)
   next()
 })
 

@@ -1,7 +1,7 @@
 'use strict'
 
 import test from 'ava'
-import { iterationsToEscape } from '../../main/lib/math.js'
+import iterationsToEscape from '../../main/lib/iterationsToEscape.js'
 
 const knownValues = {
   '0': [ { x: 2, y: 2 }, { x: 1.84, y: -1 }, { x: 1.6, y: 1.96 } ],

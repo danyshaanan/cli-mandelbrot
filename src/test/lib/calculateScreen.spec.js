@@ -1,7 +1,7 @@
 'use strict'
 
 import test from 'ava'
-import { calculateScreen } from '../../main/lib/grid.js'
+import calculateScreen from '../../main/lib/calculateScreen.js'
 
 const def = {
   pixelsPerUnit: 32,

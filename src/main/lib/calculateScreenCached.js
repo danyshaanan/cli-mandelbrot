@@ -1,6 +1,6 @@
 'use strict'
 
-const calculateScreen = require('./grid.js').calculateScreen
+const calculateScreen = require('./calculateScreen.js')
 
 let cache = {}
 const cacheSize = 20
@@ -14,7 +14,7 @@ function checkSizeChange(w, h) {
   }
 }
 
-function getScreen(def, w, h) {
+function calculateScreenCached(def, w, h) {
   checkSizeChange(w, h)
   const key = JSON.stringify(def)
   if (key in cache) {
@@ -27,4 +27,4 @@ function getScreen(def, w, h) {
   return val
 }
 
-module.exports = { getScreen }
+module.exports = calculateScreenCached
