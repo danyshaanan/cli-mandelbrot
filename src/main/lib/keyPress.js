@@ -11,9 +11,4 @@ const keyFuncs = {
   g: def => { def.iterations -= 10 }
 }
 
-module.exports = (def, key) => {
-  if (keyFuncs[key]) {
-    keyFuncs[key](def)
-  }
-  return def
-}
+module.exports = (def, key) => (keyFuncs[key] && keyFuncs[key](def), def)
