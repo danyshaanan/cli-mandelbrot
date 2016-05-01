@@ -34,7 +34,9 @@
   "preferGlobal": true,
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint",
+    "ava": "ava src/test/**/*.spec.js",
+    "watch": "npm run ava -- --watch ",
+    "test": "npm run lint && npm run ava",
     "start": "node ./src/main/cli-mandelbrot.js"
   },
   "bin": {
@@ -44,6 +46,8 @@
     "cli-color": "0.3.2"
   },
   "devDependencies": {
+    "ava": "0.13.0",
+    "babel-eslint": "6.0.2",
     "eslint": "2.8.0",
     "eslint-config-standard": "5.2.0",
     "eslint-plugin-promise": "1.1.0",
