@@ -1,24 +1,22 @@
 'use strict'
 
-var keyFuncs = {
-  w: function(def) { def.y -= 10 / def.pixelsPerUnit },
-  a: function(def) { def.x -= 10 / def.pixelsPerUnit },
-  s: function(def) { def.y += 10 / def.pixelsPerUnit },
-  d: function(def) { def.x += 10 / def.pixelsPerUnit },
-  r: function(def) { def.pixelsPerUnit *= 2 },
-  f: function(def) { def.pixelsPerUnit /= 2 },
-  t: function(def) { def.iterations += 10 },
-  g: function(def) { def.iterations -= 10 },
-  '0': function(def) { def.ascii = !def.ascii }
+const keyFuncs = {
+  w: def => { def.y -= 10 / def.pixelsPerUnit },
+  a: def => { def.x -= 10 / def.pixelsPerUnit },
+  s: def => { def.y += 10 / def.pixelsPerUnit },
+  d: def => { def.x += 10 / def.pixelsPerUnit },
+  r: def => { def.pixelsPerUnit *= 2 },
+  f: def => { def.pixelsPerUnit /= 2 },
+  t: def => { def.iterations += 10 },
+  g: def => { def.iterations -= 10 },
+  '0': def => { def.ascii = !def.ascii }
 }
 
-function keyPress(def, key) {
+const keyPress = (def, key) => {
   if (keyFuncs[key]) {
     keyFuncs[key](def)
   }
   return def
 }
 
-module.exports = {
-  keyPress: keyPress
-}
+module.exports = { keyPress }

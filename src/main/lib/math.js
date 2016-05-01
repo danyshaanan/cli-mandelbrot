@@ -1,9 +1,9 @@
 'use strict'
 
 function iterationsToEscape(x0, y0, iterations) {
-  var x = x0
-  var y = y0
-  var i = 0
+  let x = x0
+  let y = y0
+  let i = 0
 
   function iterate() {
     i++
@@ -17,6 +17,4 @@ function iterationsToEscape(x0, y0, iterations) {
   return i
 }
 
-module.exports = {
-  iterationsToEscape: iterationsToEscape
-}
+module.exports = { iterationsToEscape }

@@ -1,20 +1,20 @@
 'use strict'
 
-var _ = require('lodash')
-var iterationsToEscape = require('../../main/lib/math.js').iterationsToEscape
+const _ = require('lodash')
+const iterationsToEscape = require('../../main/lib/math.js').iterationsToEscape
 
-var results = {}
+let results = {}
 
 const trunc = a => Math.floor(a * 100) / 100
 
-var jump = 0.04
+const jump = 0.04
 
-for (var i = -2; i <= 2; i += jump) {
-  for (var j = -2; j <= 2; j += jump) {
-    var p = { x: trunc(i), y: trunc(j) }
-    var iterations = iterationsToEscape(i, j, 10)
+for (let i = -2; i <= 2; i += jump) {
+  for (let j = -2; j <= 2; j += jump) {
+    const p = { x: trunc(i), y: trunc(j) }
+    const iterations = iterationsToEscape(i, j, 10)
 
-    var cell = '' + iterations
+    const cell = iterations.toString()
     results[cell] = results[cell] || []
     results[cell].push(p)
   }

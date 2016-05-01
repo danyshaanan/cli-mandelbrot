@@ -2,16 +2,16 @@
 
 'use strict'
 
-var clc = require('cli-color')
+const clc = require('cli-color')
 
-var def = require('./lib/def.json')
-var input = require('./lib/input.js')
-var getScreen = require('./lib/cache.js').getScreen
+let def = require('./lib/def.json')
+const input = require('./lib/input.js')
+const getScreen = require('./lib/cache.js').getScreen
 
-var helpTextOn = true
+let helpTextOn = true
 
-var moveToZero = clc.moveTo(0, 0)
-var baseHelpText = [
+const moveToZero = clc.moveTo(0, 0)
+const baseHelpText = [
   'q: toggle help text',
   '0: toggle ascii mode',
   'w: up',
@@ -27,17 +27,17 @@ var baseHelpText = [
 ].join('\n')
 
 function next() {
-  var output = moveToZero + getScreen(def, clc.width - 1, clc.height)
+  let output = moveToZero + getScreen(def, clc.width - 1, clc.height)
   if (helpTextOn) {
-    output += moveToZero + clc.xterm(8)(JSON.stringify(def, null, 2) + '\n' + baseHelpText)
+    output += moveToZero + clc.xterm(8)(`${JSON.stringify(def, null, 2)}\n${baseHelpText}`)
   }
   process.stdout.write(output)
 }
 
 process.stdin.setRawMode(true)
 process.stdin.resume()
-process.stdin.on('data', function(data) {
-  var key = data.toString()[0]
+process.stdin.on('data', data => {
+  const key = data.toString()[0]
   if (key === 'o') {
     console.log(clc.reset)
     process.exit()
