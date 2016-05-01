@@ -1,19 +1,22 @@
 'use strict'
 
-function iterationsToEscape(x, y, iterations) {
-  var x0 = x
-  var y0 = y
-  var i = -1
-  while (++i < iterations) {
+function iterationsToEscape(x0, y0, iterations) {
+  var x = x0
+  var y = y0
+  var i = 0
+
+  function iterate() {
+    i++
     var tempY = 2 * x * y + y0
     x = x * x - y * y + x0
     y = tempY
-    var r2 = x * x + y * y
-    if (r2 > 4) {
-      return i
-    }
   }
-  return -1
+
+  while (x * x + y * y < 4) {
+    if (i === iterations) return -1
+    iterate()
+  }
+  return i
 }
 
 module.exports = {
