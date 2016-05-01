@@ -20,14 +20,14 @@ const pointsByIndex = [
 
 undefinedPoints.forEach(point => {
   test(`iterationsToEscape should return undefined for [${point.x},${point.y}]`, t => {
-    t.same(iterationsToEscape(point.x, point.y, 10), undefined)
+    t.deepEqual(iterationsToEscape(point.x, point.y, 10), undefined)
   })
 })
 
 pointsByIndex.forEach((points, value) => {
   points.forEach(point => {
     test(`iterationsToEscape should return ${value} for [${point.x},${point.y}]`, t => {
-      t.same(iterationsToEscape(point.x, point.y, 10), value)
+      t.deepEqual(iterationsToEscape(point.x, point.y, 10), value)
     })
   })
 })

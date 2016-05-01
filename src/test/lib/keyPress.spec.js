@@ -20,13 +20,13 @@ test.beforeEach(t => {
 'adfgrstw'.split('').forEach(letter => {
   test(`The "${letter}" key should change def`, t => {
     keyPress(defClone, letter)
-    t.notSame(def, defClone)
+    t.notDeepEqual(def, defClone)
   })
 })
 
 'bcehijklmnopquvxyz'.split('').forEach(letter => {
   test(`The "${letter}" key should not change def`, t => {
     keyPress(defClone, letter)
-    t.same(def, defClone)
+    t.deepEqual(def, defClone)
   })
 })

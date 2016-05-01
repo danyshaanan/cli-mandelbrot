@@ -51,7 +51,7 @@
     "lodash": "4.11.1"
   },
   "devDependencies": {
-    "ava": "0.13.0",
+    "ava": "0.14.0",
     "babel-eslint": "6.0.2",
     "eslint": "2.8.0",
     "eslint-config-standard": "5.2.0",
