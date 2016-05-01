@@ -32,6 +32,10 @@
     "email": "danyshaanan@gmail.com"
   },
   "preferGlobal": true,
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "engine-strict": true,
   "scripts": {
     "lint": "eslint .",
     "ava": "ava src/test/**/*.spec.js",
