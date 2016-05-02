@@ -37,6 +37,7 @@
   },
   "engine-strict": true,
   "scripts": {
+    "perf": "node src/test/performanceTest.js",
     "lint": "eslint src/",
     "ava": "ava src/test/**/*.spec.js",
     "watch": "npm run ava -- --watch ",
